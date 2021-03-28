@@ -1,1 +1,1 @@
-sass --watch assets/scss/main.scss:assets/css/main.css
+sass --watch assets/scss/mobile.scss:assets/css/mobile.css

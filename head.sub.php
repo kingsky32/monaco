@@ -45,6 +45,7 @@ header("Pragma: no-cache"); // HTTP/1.0
   <meta charset="UTF-8" />
   <title>모나코 홀덤 라운지 펍</title>
   <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/js/common.js"></script>
   <?php
 if (G5_IS_MOBILE) {
     echo '<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=0,maximum-scale=10,user-scalable=yes">'.PHP_EOL;
@@ -58,7 +59,6 @@ if (G5_IS_MOBILE) {
 if($config['cf_add_meta'])
     echo $config['cf_add_meta'].PHP_EOL;
 ?>
-  <title><?php echo $g5_head_title; ?></title>
   <?php
 if (defined('G5_IS_ADMIN')) {
     if(!defined('_THEME_PREVIEW_'))

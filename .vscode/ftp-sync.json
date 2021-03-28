@@ -1,0 +1,21 @@
+{
+  "remotePath": "./",
+  "host": "ysfnb1.cafe24.com",
+  "username": "ysfnb1",
+  "password": "dudtkd01*dudtkd",
+  "port": 21,
+  "secure": false,
+  "protocol": "ftp",
+  "uploadOnSave": true,
+  "passive": false,
+  "debug": false,
+  "privateKeyPath": null,
+  "passphrase": null,
+  "agent": null,
+  "allow": [],
+  "ignore": ["\\.vscode", "\\.git", "\\.DS_Store"],
+  "generatedFiles": {
+    "extensionsToInclude": [""],
+    "path": ""
+  }
+}

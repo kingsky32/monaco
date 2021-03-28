@@ -1,0 +1,839 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  line-height: 1;
+  font-size: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  letter-spacing: -0.05rem;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+button {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+  cursor: pointer;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+input[type=text],
+input[type=number],
+input[type=email],
+select {
+  font-size: 1.6rem;
+  padding: 1.2rem 2rem;
+  height: 4.5rem;
+  font-weight: 300;
+  border: 0;
+  background-color: #fff;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Select box 스타일 초기화 */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* IE 에서 Select box 화살표 제거 */
+select::-ms-expand {
+  display: none;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #fff;
+}
+
+#wrapper {
+  min-width: 120rem;
+}
+#wrapper .hide {
+  display: none;
+}
+#wrapper .inner {
+  width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+}
+#wrapper .fix-area {
+  position: fixed;
+  bottom: 0;
+  background-color: #000;
+  width: 100%;
+  padding: 1.5rem 0;
+  z-index: 5000000;
+}
+#wrapper .fix-area .inner {
+  width: 110rem;
+}
+#wrapper .fix-area .inner > img {
+  float: left;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+}
+#wrapper .fix-area .inner form {
+  display: flex;
+}
+#wrapper .fix-area .inner form .form-container {
+  flex: 1;
+}
+#wrapper .fix-area .inner form .form-row {
+  margin: 0;
+  width: auto;
+}
+#wrapper .fix-area .inner form .form-row input,
+#wrapper .fix-area .inner form .form-row select {
+  width: 17rem;
+}
+#wrapper .fix-area .inner form .submit {
+  width: 13.4rem;
+  background-color: #d2824c;
+}
+#wrapper .fix-area .inner form .form-agree {
+  margin: 1rem 0 0;
+  width: auto;
+}
+#wrapper .fix-area .inner form .form-agree label {
+  color: #fff;
+}
+#wrapper form .form-row {
+  width: 91rem;
+  display: flex;
+  margin: 0 auto 0.5rem;
+}
+#wrapper form .form-row input,
+#wrapper form .form-row select {
+  width: 22rem;
+}
+#wrapper form .form-row input:not(:last-child),
+#wrapper form .form-row select:not(:last-child) {
+  margin-right: 1rem;
+}
+#wrapper form .form-agree {
+  display: flex;
+  width: 91rem;
+  margin: 0 auto 4rem;
+}
+#wrapper form .form-agree .agree {
+  margin-right: 1rem;
+  font-size: 1.3rem;
+  font-weight: 300;
+}
+#wrapper form .form-agree .agree a {
+  font-weight: 500;
+}
+#wrapper form .submit {
+  background-color: #000;
+  display: block;
+  width: 30rem;
+  padding: 2rem 0;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 auto;
+}
+#wrapper header {
+  background-color: #000000;
+  height: 8.6rem;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  z-index: 50000;
+  width: 100%;
+  top: 0;
+}
+#wrapper header .inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#wrapper header .inner nav {
+  flex: 1;
+  margin-left: 17rem;
+}
+#wrapper header .inner nav ul {
+  display: flex;
+  align-items: center;
+}
+#wrapper header .inner nav ul li {
+  flex: 1;
+  text-align: center;
+}
+#wrapper header .inner nav ul li span {
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  font-size: 1.6rem;
+  line-height: 2rem;
+  text-align: center;
+}
+#wrapper footer {
+  font-size: 1.4rem;
+  color: #a5a5a5;
+  line-height: 2.6rem;
+  text-align: center;
+}
+#wrapper main {
+  padding-top: 8.6rem;
+  background-color: #000000;
+}
+#wrapper main section {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#wrapper main section > img {
+  width: 100%;
+  display: block;
+}
+#wrapper main #section-main {
+  padding: 6rem 0 7rem;
+}
+#wrapper main #section-main .inner .text-1 {
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper main #section-main .inner .text-2 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-main .inner .text-3 {
+  display: block;
+  margin: 0 auto 1.5rem;
+}
+#wrapper main #section-main .inner .text-4 {
+  display: block;
+  margin: 0 auto 3.5rem;
+}
+#wrapper main #section-main .inner .text-5 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-main .inner .text-6 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-1 {
+  padding: 3rem 0 6rem;
+}
+#wrapper main #section-1 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-1 .inner .text-2 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-2 {
+  padding: 8rem 0 47rem;
+}
+#wrapper main #section-2 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-2 .inner .text-2 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-2 .inner .text-3 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-3 {
+  padding: 15rem 0 13rem;
+}
+#wrapper main #section-3 .inner .text-1 {
+  display: block;
+  margin: 0 auto 5rem;
+}
+#wrapper main #section-3 .inner .text-2 {
+  display: block;
+  margin: 0 auto 5rem;
+}
+#wrapper main #section-3 .inner .text-3 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-4 {
+  padding: 7rem 0 55rem;
+}
+#wrapper main #section-4 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-4 .inner .text-2 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-4 .inner .text-3 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-4 .inner .text-4 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-5 {
+  padding: 9rem 0 2rem;
+}
+#wrapper main #section-5 .inner {
+  display: flex;
+  justify-content: center;
+}
+#wrapper main #section-5 .inner .img-1 {
+  display: block;
+  margin-right: 7.5rem;
+}
+#wrapper main #section-5 .inner .img-2 {
+  display: block;
+}
+#wrapper main #section-6 {
+  padding: 9rem 0 6rem;
+}
+#wrapper main #section-6 .inner .logos {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-6 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-6 .inner .text-2 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-6 .inner .table {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-7 {
+  padding: 9rem 0 5rem;
+}
+#wrapper main #section-7 .inner .text-1 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-7 .inner .text-2 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-7 .inner .text-3 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-7 .inner .slide-container {
+  height: 54rem;
+  display: flex;
+  overflow: hidden;
+  margin-bottom: 6rem;
+}
+#wrapper main #section-7 .inner .slide-container .swiper-container {
+  flex: 5;
+}
+#wrapper main #section-7 .inner .slide-container .swiper-container .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#wrapper main #section-7 .inner .slide-container .swiper-button-next,
+#wrapper main #section-7 .inner .slide-container .swiper-button-prev {
+  background-color: #fff;
+  width: 4.7rem;
+  height: 4.7rem;
+  border-radius: 4.7rem;
+  color: #000;
+}
+#wrapper main #section-7 .inner .slide-container .swiper-button-next:after,
+#wrapper main #section-7 .inner .slide-container .swiper-container-rtl .swiper-button-prev:after,
+#wrapper main #section-7 .inner .slide-container .swiper-button-prev:after,
+#wrapper main #section-7 .inner .slide-container .swiper-container-rtl .swiper-button-next:after {
+  font-size: 1.2rem;
+}
+#wrapper main #section-7 .inner .slide-container .type-box {
+  background-color: #fff;
+  flex: 2;
+}
+#wrapper main #section-7 .inner .slide-container .type-box .type-header {
+  display: flex;
+}
+#wrapper main #section-7 .inner .slide-container .type-box .type-header span {
+  flex: 1;
+  cursor: pointer;
+  background-color: #c49d5a;
+  display: block;
+  font-size: 2rem;
+  letter-spacing: -0.04rem;
+  text-align: center;
+  height: 6rem;
+  line-height: 6rem;
+  color: #ffffff;
+}
+#wrapper main #section-7 .inner .slide-container .type-box .type-header span.active {
+  background-color: #fff;
+  color: #000000;
+}
+#wrapper main #section-7 .inner .slide-container .type-box .type-contents {
+  padding: 6rem;
+  width: 38rem;
+}
+#wrapper main #section-7 .inner .contents {
+  width: 125rem;
+  margin-left: -2rem;
+}
+#wrapper main #section-8 {
+  padding: 8rem 0;
+  position: relative;
+}
+#wrapper main #section-8 .text-1 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-8 .text-2 {
+  display: block;
+  margin: 0 auto 5rem;
+}
+#wrapper main #section-8 .swiper {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+}
+#wrapper main #section-8 .swiper .swiper-container {
+  margin: 0 auto;
+}
+#wrapper main #section-8 .swiper .swiper-container .swiper-wrapper {
+  width: 85%;
+  height: 52rem;
+}
+#wrapper main #section-8 .swiper .swiper-container .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+#wrapper main #section-8 .swiper .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#wrapper main #section-9 {
+  padding: 6.5rem 0 7rem;
+}
+#wrapper main #section-9 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-9 .inner .text-2 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-10 {
+  padding: 9rem 0;
+  background-color: #f5eac2;
+}
+#wrapper main #section-10 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-10 .inner .text-2 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-10 .inner .text-3 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-10 .inner .text-4 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-10 .inner .text-5 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-10 .inner .imgs {
+  padding: 0 14rem;
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper main #section-11 {
+  padding: 8.5rem 0 8rem;
+}
+#wrapper main #section-11 .inner .text-1 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-12 {
+  padding: 3rem 0 6rem;
+}
+#wrapper main #section-12 .inner .text-1 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-13 {
+  padding: 12rem 0 6rem;
+}
+#wrapper main #section-13 .inner .text-1 {
+  display: block;
+  margin: 0 auto 3.5rem;
+}
+#wrapper main #section-13 .inner .text-2 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-13 .inner .text-3 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-14 .swiper-container .swiper-wrapper .swiper-slide {
+  width: 30rem;
+  height: 20rem;
+}
+#wrapper main #section-14 .swiper-container .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#wrapper main #section-15 {
+  padding: 12rem 0 10.5rem;
+  background-color: #f5eac2;
+}
+#wrapper main #section-15 .inner .text-1 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-15 .inner .text-2 {
+  display: block;
+  margin: 0 auto 4rem;
+}
+#wrapper main #section-15 .inner .imgs {
+  padding: 0 5.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+#wrapper main #section-16 {
+  padding: 6.5rem 0 7rem;
+  background-color: #f5eac2;
+}
+#wrapper main #section-16 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-16 .inner .text-2 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-17 {
+  padding: 9rem 0 4.5rem;
+}
+#wrapper main #section-17 .inner img {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-17 .inner .text-1 {
+  margin-bottom: 3rem;
+}
+#wrapper main #section-17 .inner .text-2 {
+  margin-bottom: 1rem;
+}
+#wrapper main #section-17 .inner .text-3 {
+  margin-bottom: 3rem;
+}
+#wrapper main #section-17 .inner .text-4 {
+  margin-bottom: -1.5rem;
+}
+#wrapper main #section-17 .inner .text-6 {
+  margin-bottom: 2rem;
+}
+#wrapper main #section-17 .inner form {
+  height: 45rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 14rem 0 7rem;
+}
+#wrapper main #section-17 .inner form .text-7 {
+  margin-bottom: 2rem;
+}
+#wrapper main #section-18 {
+  padding: 6.5rem 0 5.5rem;
+}
+#wrapper main #section-18 .inner .text-1 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-18 .inner .text-2 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-19 {
+  padding: 10rem 0;
+}
+#wrapper main #section-19 .inner .step {
+  display: block;
+  margin: 0 auto 7.5rem;
+}
+#wrapper main #section-19 .inner .text-1 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-19 .inner .text-2 {
+  display: block;
+  margin: 0 auto 4.5rem;
+}
+#wrapper main #section-19 .inner .text-3 {
+  display: block;
+  margin: 0 auto 2.5rem;
+}
+#wrapper main #section-19 .inner .coupon {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-20 {
+  padding: 9rem 0 5rem;
+}
+#wrapper main #section-20 .inner .text-1 {
+  display: block;
+  margin: 0 auto 3.5rem;
+}
+#wrapper main #section-20 .inner .text-2 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-20 .inner .text-3 {
+  display: block;
+  margin: 0 auto 2rem;
+}
+#wrapper main #section-20 .inner .contents {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-21 {
+  padding: 11rem 0 8rem;
+}
+#wrapper main #section-21 .inner .text-1 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-21 .inner .text-2 {
+  display: block;
+  margin: 0 auto 3rem;
+}
+#wrapper main #section-21 .inner .text-3 {
+  display: block;
+  margin: 0 auto 1rem;
+}
+#wrapper main #section-21 .inner .text-4 {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-22 {
+  padding: 7rem 0 5.5rem;
+}
+#wrapper main #section-22 .inner img {
+  display: block;
+  margin: 0 auto;
+}
+#wrapper main #section-22 .inner .text-1 {
+  margin-bottom: 2rem;
+}
+#wrapper main #section-22 .inner .text-2 {
+  margin-bottom: 3rem;
+}
+#wrapper main #section-22 .inner .text-3 {
+  margin-bottom: 7.5rem;
+}
+#wrapper main #section-22 .inner .text-4 {
+  margin-bottom: 3.5rem;
+}
+#wrapper main #section-22 .inner .text-5 {
+  margin-bottom: 2rem;
+}
+#wrapper main #section-22 .inner .text-6 {
+  margin-bottom: 7rem;
+}
+#wrapper main #section-22 .inner .text-7 {
+  margin-bottom: 10rem;
+}
+#wrapper main #section-22 .inner form {
+  margin-bottom: 4.5rem;
+}
+#wrapper main #section-22 .inner form label {
+  color: #ffffff;
+}
+#wrapper main #section-22 .inner form .submit {
+  background-color: #ae952c;
+}
+
+/*# sourceMappingURL=main.css.map */
